@@ -10,7 +10,7 @@ function auto_login( $email ) {
     if ( ! is_user_logged_in() ) {
         $user_id       = get_user_id( $email );
         $user          = get_user_by( 'ID', $user_id );
-        $redirect_page = admin_url() . '?platform=hpanel';
+        $redirect_page = admin_url();
         if ( ! $user ) {
             wp_redirect( $redirect_page );
             exit();
